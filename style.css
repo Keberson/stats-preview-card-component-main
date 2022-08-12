@@ -7,6 +7,12 @@ html, body {
     height: 100%;
 }
 
+@media screen and (max-width: 376px) {
+    html, body {
+        height: auto;
+    }
+}
+
 .container {
     height: 100%;
     display: flex;
@@ -15,12 +21,25 @@ html, body {
     background-color: hsl(233, 47%, 7%);
 }
 
+@media screen and (max-width: 376px) {
+    .container {
+        height: auto;
+    }
+}
+
 .content {
     padding: 0 165px;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 376px) {
+    .content {
+        padding: 88px 24px;
+        height: auto;
+    }
 }
 
 .stats-card {
@@ -33,9 +52,23 @@ html, body {
     border-radius: 10px;
 }
 
+@media screen and (max-width: 376px) {
+    .stats-card {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+}
+
 .stats-card_image-part {
     order: 2;
     border-radius: inherit;
+}
+
+@media screen and (max-width: 376px) {
+    .stats-card_image-part {
+        order: 1;
+    }
 }
 
 .stats-card_image {
@@ -51,6 +84,16 @@ html, body {
     border-bottom-right-radius: inherit;
 }
 
+@media screen and (max-width: 376px) {
+    .stats-card_image {
+        width: 327px;
+        height: 240px;
+        background-image: url("images/image-header-mobile.jpg");
+        border-top-left-radius: inherit;
+        border-bottom-right-radius: 0;
+    }
+}
+
 .stats-card_text-part {
     box-sizing: border-box;
     padding: 79px 118px 63px 72px;
@@ -60,11 +103,25 @@ html, body {
     justify-content: space-between;
 }
 
+@media screen and (max-width: 376px) {
+    .stats-card_text-part {
+        order: 2;
+        padding: 40px 32px 36px 32px;
+        text-align: center;
+    }
+}
+
 .stats-card_title {
     font-family: 'Inter', sans-serif;
     font-size: 34px;
     font-weight: 700;
     color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 376px) {
+    .stats-card_title {
+        font-size: 28px;
+    }
 }
 
 .stats-card_select {
@@ -80,10 +137,27 @@ html, body {
     color: hsla(0, 0%, 100%, 0.75);
 }
 
+@media screen and (max-width: 376px) {
+    .stats-card_subtitle {
+        margin-top: 22px;
+    }
+}
+
 .stats-card_desc {
     display: flex;
     justify-content: space-between;
     padding-right: 30px;
+}
+
+@media screen and (max-width: 376px) {
+    .stats-card_desc {
+        margin-top: 48px;
+        padding-right: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: initial;
+        row-gap: 32px;
+    }
 }
 
 .stats-card_col_title {
@@ -103,6 +177,7 @@ html, body {
 }
 
 .attribution {
+    font-family: 'Inter', sans-serif;
     font-size: 11px;
     text-align: center;
     color: hsl(0, 0%, 100%);
